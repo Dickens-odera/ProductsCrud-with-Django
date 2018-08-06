@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+  <head>
+    <title>ecommerce</title>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}"/>
+  </head>
+<body>
+  <div class="container">
+    <div class="jumbotron text-center bg-dark">
+        DJANGO WEB DEVELOPMENT
+    </div>
+  </div>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center">
+  <h4 style="text-align:center">The products are as follows:</h4>
+{% for items in products%}
+        <a href="{% url 'list_products' %}"><p style="text-align:center">{{items.description}}</p></a>
+  {% endfor %}
+  <div>
+    <div class="col-md-6">
+        <img src="{% static 'images/005.jpg' %}" alt="unsupported image" class="img-rounded"/>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="{% static 'bootstrap/includes/js/jquery-1.8.2.min.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<head><title>update</title></head>
+
+<body>
+<form method="post" action="">
+  {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Update">
+</form>
+  {%  if products %}
+  <a href="{% url 'delete_products'  products.id %}">Delete</a>
+  {% endif %}
+</body>
+
+</html>
