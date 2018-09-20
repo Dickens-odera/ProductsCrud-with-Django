@@ -37,7 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+
     'products',
+    'customers',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +59,15 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'E_comerce.urls'
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+)
+LOGIN_REDIRECT_URL = '/'
 
 TEMPLATES = [
     {
@@ -74,23 +91,23 @@ WSGI_APPLICATION = 'E_comerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   }
+}
+#MYSQL databse config
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     'default':{
+#         'ENGINE':'django.db.backends.mysql',
+#         'NAME':'ecommerce',
+#         'USER':'root',
+#         'PASSWORD':'',
+#         'HOST':'localhost',
+#         'PORT':'',
 #     }
 # }
-#MYSQL databse config
-DATABASES = {
-    'default':{
-        'ENGINE':'django.db.backends.mysql',
-        'NAME':'ecommerce',
-        'USER':'root',
-        'PASSWORD':'',
-        'HOST':'localhost',
-        'PORT':'',
-    }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -137,3 +154,4 @@ if DEBUG:
 
     # STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),'static','bootstrap'),
     # )
+SITE_ID = 1

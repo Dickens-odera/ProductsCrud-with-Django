@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title>django</title>
+  <script type="text/javascript" src="{%  static 'bootstrap/js/bootstrap.js' %}"></script>
+  <link rel='stylesheet' type="text/css" href="{%  static 'bootstrap/css/bootstrap.css' %}"/>
+</head>
+<body>
+  <form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Sign Up" class="btn btn-outline-success btn-sm"/>
+  </form>
+</body>
+</html>

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Products
 from .forms import ProductForm
+#UserRegistration
 #Create your views here.
 def list_products(request):
     products = Products.objects.all()

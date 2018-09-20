@@ -6,7 +6,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}"/>
   </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
+
     <div class="jumbotron text-center bg-dark">
         DJANGO WEB DEVELOPMENT
     </div>
@@ -18,7 +19,7 @@
 {% for items in products%}
         <a href="{% url 'list_products' %}"><p style="text-align:center">{{items.description}}</p></a>
   {% endfor %}
-  <div>
+      </div>
     <div class="col-md-6">
         <img src="{% static 'images/005.jpg' %}" alt="unsupported image" class="img-rounded"/>
     </div>
