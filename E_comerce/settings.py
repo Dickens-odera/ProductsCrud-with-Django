@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     'products',
     'customers',
+    'djang-ecommerce-app.herokuapp.com'
 ]
 
 MIDDLEWARE = [
