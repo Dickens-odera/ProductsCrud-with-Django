@@ -5,12 +5,13 @@ Deployed on <a href="www.heroku.com">Heroku</a>. Find it here at the <a href="dj
 Tools:
 <li>python 3.6 or 2.7</li>
 <li>pip</li>
-
-Setup : pip install django
-        git clone https://github.com/Dickens-odera/ProductsCrud-with-Django.git<br>
-        py manage.py runserver
+<li>git</li>
+Setup : 
+<li>pip install django</li>
+<li>git clone https://github.com/Dickens-odera/ProductsCrud-with-Django.git</li>
+<li>py manage.py runserver</li>
 <br>
-To create a product <a href="djang-ecommerce-app.herokuapp.com/products/create">Click here</a><br>
+To create a product nagigate to "djang-ecommerce-app.herokuapp.com/products/create" <br>
 To udpdate an existing product :<br>
 navigate to "djang-ecommerce-app.herokuapp.com/products/update/<:producId>"<br>
         Have fun!
