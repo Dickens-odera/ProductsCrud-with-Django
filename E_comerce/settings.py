@@ -25,7 +25,7 @@ SECRET_KEY = '#!5)y(p#-9d2!*e61rw)g*7&#jw%@u^+2-3oh_8dj+m9q48cef'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djang-ecommerce-app.herokuapp.com']
 
 
 # Application definition
@@ -46,7 +46,6 @@ INSTALLED_APPS = [
 
     'products',
     'customers',
-    'djang-ecommerce-app.herokuapp.com'
 ]
 
 MIDDLEWARE = [
