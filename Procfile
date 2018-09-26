@@ -1,1 +1,1 @@
-web: py manage.py runserver
+web: gunicorn E_comerce.wsgi
