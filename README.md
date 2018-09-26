@@ -11,7 +11,7 @@ Setup :
 <li>git clone https://github.com/Dickens-odera/ProductsCrud-with-Django.git</li>
 <li>py manage.py runserver</li>
 <br>
-To create a product nagigate to "djang-ecommerce-app.herokuapp.com/products/create" <br>
+To create a product navigate to "djang-ecommerce-app.herokuapp.com/products/create" <br>
 To udpdate an existing product :<br>
 navigate to "djang-ecommerce-app.herokuapp.com/products/update/<:producId>"<br>
         Have fun!
